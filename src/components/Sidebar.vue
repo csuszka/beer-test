@@ -32,17 +32,20 @@ export default {
   name: "Sidebar",
 
   data: () => ({
+    selectedAlcohol:[],
     alcoholLevels: [
       { text: "non-alcoholic - 0%", value: false },
       { text: "low - 0-4%", value: false },
       { text: "medium - 4-8%", value: false },
       { text: "high - >8%", value: false },
     ],
+    selectedBitterness:[],
     bitternessLevels: [
       { text: "low - IBU 0-40", value: false },
       { text: "medium - IBU 40-80", value: false },
       { text: "high IBU 80-120", value: false },
     ],
+    selectedColors: [],
     colors: [
       { text: "light - EBC 0-20", value: false },
       { text: "medium - EBC 20-40", value: false },
