@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p>Alcohol content</p>
+  <div class="sidebar">
+    <h2>Alcohol content</h2>
     <v-radio-group v-model="selectedAlcohol">
       <v-radio
         v-for="(alcohol, index) in alcoholLevels"
@@ -9,7 +9,7 @@
         :value="index"
       />
     </v-radio-group>
-    <p>Bitterness</p>
+    <h2>Bitterness</h2>
     <v-radio-group v-model="selectedBitterness">
       <v-radio
         v-for="(bitterness, index) in bitternessLevels"
@@ -18,7 +18,7 @@
         :value="index"
       />
     </v-radio-group>
-    <p>Color</p>
+    <h2>Color</h2>
     <v-radio-group v-model="selectedColors">
       <v-radio
         v-for="(color, index) in colors"
@@ -35,6 +35,16 @@
     ></v-text-field>
   </div>
 </template>
+
+<style scoped>
+.sidebar {
+  background: #F6F6F6;
+  min-width: 200px;
+  max-width: 320px;
+  padding: 8px;
+  font-family: Poppins, sans-serif;
+}
+</style>
 
 <script>
 export default {
