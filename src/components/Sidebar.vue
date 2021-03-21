@@ -27,6 +27,12 @@
         :value="index"
       />
     </v-radio-group>
+     <v-text-field
+      label="Name of the beer"
+      :rules="rules"
+      hide-details="auto"
+      v-model="selectedName"
+    ></v-text-field>
   </div>
 </template>
 
@@ -35,29 +41,35 @@ export default {
   name: "Sidebar",
 
   data: () => ({
-    selectedAlcohol: null,
+    selectedAlcohol: 0,
     alcoholLevels: [
+      { text: "All", value: false },
       { text: "non-alcoholic - 0%", value: false },
       { text: "low - 0-4%", value: false },
       { text: "medium - 4-8%", value: false },
       { text: "high - 8%+", value: false },
     ],
-    selectedBitterness: null,
+    selectedBitterness: 0,
     bitternessLevels: [
+      { text: "All", value: false },
       { text: "low - IBU 0-40", value: false },
       { text: "medium - IBU 40-80", value: false },
       { text: "high IBU 80+", value: false },
     ],
-    selectedColors: null,
+    selectedColors: 0,
     colors: [
+      { text: "All", value: false },
       { text: "light - EBC 0-20", value: false },
       { text: "medium - EBC 20-40", value: false },
       { text: "dark - EBC 40+", value: false },
     ],
+    selectedName: "",
+    rules: []
   }),
   computed: {
     query: () => {
-      return "";
+      let queryString = `https://api.punkapi.com/v2/beers`;
+      return queryString;
     },
   },
 };
