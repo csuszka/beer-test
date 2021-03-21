@@ -39,6 +39,7 @@
 <style scoped>
 .sidebar {
   background: #F6F6F6;
+  color: #717171;
   min-width: 200px;
   max-width: 320px;
   padding: 8px;
@@ -78,7 +79,7 @@ export default {
   }),
   computed: {
     query: () => {
-      let queryString = `https://api.punkapi.com/v2/beers`;
+      let queryString = `https://api.punkapi.com/v2/beers?page=1&per_page=15`;
       return queryString;
     },
   },

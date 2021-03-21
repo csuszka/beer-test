@@ -16,7 +16,7 @@ body{
 display: flex;
 flex-wrap: wrap;
 min-width: 320px;
-max-width: 800px;
+max-width: 1280px;
 }
 </style>
 

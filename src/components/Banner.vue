@@ -11,11 +11,11 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  max-height: 300px;
-  min-height: 200px;
+  height: 160px;
   color:beige;
   padding: 9px;
   text-align: center;
+  line-height: 151px;
   font-family: Poppins, sans-serif;
 }
 </style>
