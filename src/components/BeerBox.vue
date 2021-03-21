@@ -13,14 +13,16 @@
 .beer-box {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-self: center;
-  margin: 9px;
+  margin: 10px;
   height: 600px;
   width: 300px;
   background: white;
   color: #717171;
   padding: 9px;
-  border: #717171 solid 1px;
+  border: #F6F6F6 solid 1px;
+  box-shadow: 3px 3px 5px #F6F6F6;
   border-radius: 5px;
   font-family: Poppins, sans-serif;
   overflow: hidden;

@@ -6,10 +6,7 @@
 
 <style scoped>
 .top-banner{
-  background: center no-repeat url("../img/beer.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: center no-repeat url("../img/beer2.jpg");
   background-size: cover;
   opacity:0.7;
   height: 160px;

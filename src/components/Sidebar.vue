@@ -40,9 +40,9 @@
 .sidebar {
   background: #f6f6f6;
   color: #717171;
-  min-width: 200px;
+  min-width: 320px;
   max-width: 320px;
-  padding: 8px;
+  padding: 16px;
   font-family: Poppins, sans-serif;
 }
 </style>
@@ -134,6 +134,16 @@ export default {
           case 3:
             queryString += "&ebc_gt=39.999";
             break;
+        }
+
+        switch(this.selectedName){
+          case "":
+           queryString += "";
+            break; 
+            default:
+           queryString += "&beer_name=";
+           queryString += this.selectedName;
+            break; 
         }
         console.log(queryString);
         return queryString;
