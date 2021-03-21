@@ -1,7 +1,7 @@
 <template>
 <div class="app">
-  <sidebar></sidebar>
-  <beers></beers>
+  <sidebar @changed-query="updateBeers"></sidebar>
+  <beers :beers="beers"></beers>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ body{
 
 <style scoped>
 .app {
+  margin:auto;
 display: flex;
 flex-wrap: wrap;
 min-width: 320px;
@@ -34,7 +35,12 @@ export default {
   },
 
   data: () => ({
-    //
+    beers: null,
   }),
+  methods:{
+    updateBeers: function (beersData){
+      this.beers = beersData;
+    }
+  }
 };
 </script>

@@ -2,9 +2,9 @@
   <div class="beer-box">
     <img :src="picture" />
     <p>{{ name }}</p>
-    <p>Alcohol content: {{alcohol}}%</p>
-    <p>Bitterness: IBU {{bitterness}}</p>
-    <p>Color: EBC {{color}}</p>
+    <p>Alcohol content: {{ alcohol }}%</p>
+    <p>Bitterness: IBU {{ bitterness }}</p>
+    <p>Color: EBC {{ color }}</p>
     <p>{{ description }}</p>
   </div>
 </template>
@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  margin: 5px;
+  margin: 9px;
   height: 600px;
   width: 300px;
   background: white;
@@ -23,12 +23,12 @@
   border: #717171 solid 1px;
   border-radius: 5px;
   font-family: Poppins, sans-serif;
-  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.beer-box>p{
+.beer-box > p {
   margin: 5px;
 }
-.beer-box>p:nth-child(2) {
+.beer-box > p:nth-child(2) {
   font-weight: bold;
 }
 .beer-box > img {
@@ -41,15 +41,15 @@
 export default {
   name: "BeerBox",
 
-  data: () => ({
-        picture: "https://images.punkapi.com/v2/83.png",
-        name: "India Session Lager - Prototype Challenge",
-alcohol: 5,
-bitterness: 4,
-color: 45,
-    description:
-      "A potently bitter hop variety originally grown in the US around 40 years ago, Comet has been newly resurrected - this German version has bold resinous grapefruit flavours, which add a huge fresh hop aroma to this IPA.",
-    
-  }),
+  props: {
+    picture: { type: String, required: false },
+    name: { type: String, required: true },
+    alcohol: { type: Number, required: false },
+    bitterness: { type: Number, required: false },
+    color: { type: Number, required: false },
+    description: { type: String, required: false },
+  },
+
+  data: () => ({}),
 };
 </script>

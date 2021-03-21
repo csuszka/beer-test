@@ -11,8 +11,9 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  opacity:0.7;
   height: 160px;
-  color:beige;
+  color:white;
   padding: 9px;
   text-align: center;
   line-height: 151px;
