@@ -1,41 +1,48 @@
 <template>
   <div class="beer-box">
-    <img :src="picture" />
-    <p>{{ name }}</p>
-    <p>Alcohol content: {{ alcohol }}%</p>
-    <p>Bitterness: IBU {{ bitterness }}</p>
-    <p>Color: EBC {{ color }}</p>
-    <p>{{ description }}</p>
+    <img v-if="picture" :src="picture" />
+    <img v-else src="../img/beer-placeholder.jpg"/>
+    <div>{{ name }}</div>
+    <div>Alcohol content: {{ alcohol }}%</div>
+    <div>Bitterness: IBU {{ bitterness }}</div>
+    <div>Color: EBC {{ color }}</div>
+    <div>{{ description }}</div>
   </div>
 </template>
 
 <style scoped>
 .beer-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-self: center;
   margin: 10px;
   height: 600px;
   width: 300px;
   background: white;
   color: #717171;
   padding: 9px;
-  border: #F6F6F6 solid 1px;
-  box-shadow: 3px 3px 5px #F6F6F6;
+  border: #f6f6f6 solid 1px;
+  box-shadow: 3px 3px 5px #f6f6f6;
   border-radius: 5px;
   font-family: Poppins, sans-serif;
+}
+.beer-box > div {
+  white-space: normal;
   overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px;
 }
-.beer-box > p {
-  margin: 5px;
-}
-.beer-box > p:nth-child(2) {
+.beer-box > div:nth-child(2) {
   font-weight: bold;
+  margin-top: 25px;
+}
+.beer-box > div:last-child {
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .beer-box > img {
   max-height: 150px;
   margin: auto;
+  display: block;
 }
 </style>
 
